@@ -1,0 +1,35 @@
+name: 每日运势
+
+on:
+  schedule:
+    # 北京时间每天 00:07（避开整点拥堵，UTC 16:07 前一天）
+    - cron: "7 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 抽签 + 更新 README
+        run: python scripts/fortune.py
+
+      - name: 提交变更
+        run: |
+          if [[ -z "$(git status --porcelain README.md)" ]]; then
+            echo "今日无变化，跳过提交"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "🔮 daily fortune $(TZ='Asia/Shanghai' date +'%Y-%m-%d')"
+          git push
