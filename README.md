@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+![贪吃蛇](https://raw.githubusercontent.com/你的用户名/你的用户名/output/github-contribution-grid-snake.svg)
+
 <!--
 **KuaiYu95/Kuaiyu95** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
