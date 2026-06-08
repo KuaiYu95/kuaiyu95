@@ -140,7 +140,7 @@
 
 <div align="center">
 
-<img src="https://profile-counter.glitch.me/KuaiYu95/count.svg" alt="路过的有缘人" />
+<img src="https://komarev.com/ghpvc/?username=KuaiYu95&label=%E8%B7%AF%E8%BF%87%E7%9A%84%E6%9C%89%E7%BC%98%E4%BA%BA&color=8b5cf6&style=for-the-badge" alt="路过的有缘人" />
 
 > 「你已被本结界感应到，无需扫码、无需关注。」
 > 「逆天改命的法子是没有的，下次再来也是一样。」
